@@ -3,7 +3,7 @@ $body-default-text-color: #2e2520;
 $body-default-header-color: #2e2520;
 $body-light-text-color: #ffffff;
 $body-dark-header-color: #000000;
-$body-default-background-color: #e5e5e5;
+$body-default-background-color: #fffff9;
 $body-dark-background-color: #fef3e4;
 $body-default-icon-color: #674d40;
 $body-light-icon-color: #ab816c;
@@ -12,16 +12,55 @@ $body-light-icon-color: #2e2520;
 $mobile: 320px;
 $tablet: 768px;
 $desktop: 1280px;
+
+@media screen and (min-width: $mobile) {
+  .container {
+    max-width: $mobile;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    max-width: $tablet;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container {
+    max-width: $desktop;
+  }
+}
 // --------------------------------
 
 .reviews {
   background-color: $body-default-background-color;
   color: $body-default-text-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/images/reviews/bg-footer-mobile.png);
+  @media screen and (min-width: $tablet) {
+    background-image: url(/images/reviews/bg-footer-tablet.png);
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url(/images/reviews/bg-footer-desktop.png);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(/images/reviews/bg-footer-mobile-2x.png);
+    @media screen and (min-width: $tablet) {
+      background-image: url(/images/reviews/bg-footer-tablet-2x.png);
+    }
+    @media screen and (min-width: $desktop) {
+      background-image: url(/images/reviews/bg-footer-desktop-2x.png);
+    }
+  }
 
   .reviews__title {
     color: $body-default-header-color;
     text-align: center;
     font-family: Caveat Brush;
+    margin-bottom: 24px;
   }
   .review {
     display: flex;
