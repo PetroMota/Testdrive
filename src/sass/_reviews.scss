@@ -1,0 +1,50 @@
+// замениеть на стандартные !!!
+$body-default-text-color: #2e2520;
+$body-default-header-color: #2e2520;
+$body-light-text-color: #ffffff;
+$body-dark-header-color: #000000;
+$body-default-background-color: #e5e5e5;
+$body-dark-background-color: #fef3e4;
+$body-default-icon-color: #674d40;
+$body-light-icon-color: #ab816c;
+$body-light-icon-color: #2e2520;
+
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1280px;
+// --------------------------------
+
+.reviews {
+  background-color: $body-default-background-color;
+  color: $body-default-text-color;
+
+  .reviews__title {
+    color: $body-default-header-color;
+    text-align: center;
+    font-family: Caveat Brush;
+  }
+  .review {
+    display: flex;
+    flex-direction: column;
+    max-width: 234px;
+    &:first-child {
+      max-width: 136px;
+    }
+    &:last-child {
+      max-width: 136px;
+    }
+  }
+
+  .reviews__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .review__client {
+    border-radius: 50%;
+  }
+  .review__client-name {
+    text-align: center;
+  }
+}
