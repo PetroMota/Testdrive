@@ -3,7 +3,7 @@ $body-default-text-color: #2e2520;
 $body-default-header-color: #2e2520;
 $body-light-text-color: #ffffff;
 $body-dark-header-color: #000000;
-$body-default-background-color: #e5e5e5;
+$body-default-background-color: #fffff9;
 $body-dark-background-color: #fef3e4;
 $body-default-icon-color: #674d40;
 $body-light-icon-color: #ab816c;
@@ -12,26 +12,136 @@ $body-light-icon-color: #2e2520;
 $mobile: 320px;
 $tablet: 768px;
 $desktop: 1280px;
+
+$section-padding-mobile: 10px;
+$section-padding-desktop: 50px;
+
+$section-title-padding-mobile: 10px;
+$section-title-padding-desktop: 24px;
+
+@media screen and (min-width: $mobile) {
+  .container {
+    max-width: $mobile;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    max-width: $tablet;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container {
+    max-width: $desktop;
+  }
+}
 // --------------------------------
 
 .reviews {
+  // position: relative;
+  padding-top: 30px;
   background-color: $body-default-background-color;
   color: $body-default-text-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/images/reviews/bg-footer-mobile.png);
+  @media screen and (min-width: $tablet) {
+    background-image: url(/images/reviews/bg-footer-tablet.png);
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url(/images/reviews/bg-footer-desktop.png);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(/images/reviews/bg-footer-mobile-2x.png);
+    @media screen and (min-width: $tablet) {
+      background-image: url(/images/reviews/bg-footer-tablet-2x.png);
+    }
+    @media screen and (min-width: $desktop) {
+      background-image: url(/images/reviews/bg-footer-desktop-2x.png);
+    }
+  }
 
   .reviews__title {
     color: $body-default-header-color;
     text-align: center;
     font-family: Caveat Brush;
+    font-size: 36px;
+    line-height: 1.8;
+    margin-bottom: $section-title-padding-mobile;
+    @media screen and (min-width: $tablet) {
+      font-size: 24px;
+      line-height: 2.7;
+      margin-bottom: $section-title-padding-desktop;
+    }
   }
   .review {
     display: flex;
     flex-direction: column;
-    max-width: 234px;
-    &:first-child {
-      max-width: 136px;
-    }
+    max-width: 290px;
+    &:first-child,
     &:last-child {
-      max-width: 136px;
+      display: none;
+    }
+    @media screen and (min-width: $tablet) {
+      &:first-child,
+      &:last-child {
+        display: flex;
+        max-width: 110px;
+        // position: absolute;
+        top: 15%;
+      }
+      // &:first-child {
+      //   left: 30%;
+      // }
+      // &:last-child {
+      //   right: 30%;
+      // }
+    }
+    @media screen and (min-width: $desktop) {
+      &:first-child,
+      &:last-child {
+        display: flex;
+        max-width: 136px;
+        // position: absolute;
+        top: 15%;
+      }
+      // &:first-child {
+      //   left: 30%;
+      // }
+      // &:last-child {
+      //   right: 30%;
+      // }
+    }
+  }
+
+  .review__client-text {
+    &.is-selected {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+      text-align: center;
+      max-width: 290px;
+      font-family: Montserrat;
+      font-size: 16px;
+      line-height: 1.25;
+      @media screen and (min-width: $tablet) {
+        margin-bottom: 35px;
+        max-width: 626px;
+      }
+      @media screen and (min-width: $desktop) {
+        font-family: Montserrat;
+        font-size: 18px;
+        line-height: 1.22;
+        margin-bottom: 35px;
+        max-width: 626px;
+      }
+    }
+    &.no-selected {
+      display: none;
     }
   }
 
@@ -39,12 +149,36 @@ $desktop: 1280px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-self: flex-start;
   }
 
   .review__client {
+    max-width: 110px;
     border-radius: 50%;
+    margin-bottom: 10px;
+    @media screen and (min-width: $tablet) {
+      max-width: 186px;
+    }
+    @media screen and (min-width: $desktop) {
+      max-width: 234px;
+    }
   }
   .review__client-name {
+    text-align: center;
+
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 4.06;
+
+    margin-bottom: 10px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 15px;
+    }
+  }
+  .review__counter {
+    display: block;
     text-align: center;
   }
 }
