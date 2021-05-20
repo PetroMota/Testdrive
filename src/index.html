@@ -38,37 +38,33 @@
         if (!i) {
           document.getElementById('more').style.display = 'inline';
           document.getElementById('dots').style.display = 'none';
-          document.getElementById('read').innerHTML = 'Less';
+          document.getElementById('myBtn').innerHTML = 'Less';
           i = 1;
         } else {
           document.getElementById('more').style.display = 'none';
           document.getElementById('dots').style.display = 'inline';
-          document.getElementById('read').innerHTML = 'Read more';
+          document.getElementById('myBtn').innerHTML = 'Read more';
           i = 0;
         }
-
         if (window.screen.availWidth >= 1280) {
           document.getElementById('more').style.display = 'inline';
         }
       }
     </script>
-
     <script>
       var i = 0;
       function qwert() {
         if (!i) {
-          document.getElementById('dots').style.display = 'inline';
-          document.getElementById('more').style.display = 'none';
+          document.getElementById('much').style.display = 'inline';
           document.getElementById('reading').innerHTML = 'Less';
           i = 1;
         } else {
-          document.getElementById('dots').style.display = 'none';
-          document.getElementById('more').style.display = 'inline';
+          document.getElementById('much').style.display = 'none';
           document.getElementById('reading').innerHTML = 'Read more';
           i = 0;
         }
         if (window.screen.availWidth >= 1280) {
-          document.getElementById('more').style.display = 'inline';
+          document.getElementById('much').style.display = 'inline';
         }
       }
     </script>
