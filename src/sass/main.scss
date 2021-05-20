@@ -1,16 +1,22 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+@import './vendors/modern-normalize';
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
-@import './variables';
-@import './common';
-@import './components';
+@import './base/base';
 
-@import "./program";
+@import './components/button';
+@import './components/form';
+@import './components/logo';
+@import './components/social-list';
+@import './components/modal';
+@import './components/menu';
+@import './components/container';
 
-@import './reviews';
-
-
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/about-us';
+@import './layouts/program';
+@import './layouts/reviews';
+@import './layouts/registration';
+@import './layouts/contact';
+@import './layouts/footer';
+@import './layouts/main';
+@import './layouts/try';

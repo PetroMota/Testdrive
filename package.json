@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://AndriiHoi.github.io/Project-HTML-CSS",
+  "homepage": "https://andriihoi.github.io/Project-HTML-CSS",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /Project-HTML-CSS/"
